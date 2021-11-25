@@ -1,39 +1,28 @@
-import React from 'react'
-import { useEffect } from 'react'
+import React from "react";
+import { useEffect } from "react";
 
-import tw from "tailwind-styled-components"
-import mapboxgl from '!mapbox-gl'
+import tw from "tailwind-styled-components";
+import mapboxgl from "!mapbox-gl";
 
-mapboxgl.accessToken = 'pk.eyJ1IjoiYmVuYWJzdGVjdCIsImEiOiJja3dkdTVxcjExZzlwMnVxbDk2cW53MWZ2In0.DsvBFKDQsFkqmrMHa_M9pw';
-
+mapboxgl.accessToken =
+  "pk.eyJ1IjoiYmVuYWJzdGVjdCIsImEiOiJja3dkdTVxcjExZzlwMnVxbDk2cW53MWZ2In0.DsvBFKDQsFkqmrMHa_M9pw";
 
 const Map = () => {
-
-    
   useEffect(() => {
-
-const map = new mapboxgl.Map({
-container: "map",
-style: 'mapbox://styles/drakosi/ckvcwq3rwdw4314o3i2ho8tph',
-center: [-99.29011, 39.39172],
-zoom: 5
-});
-    
-  })
+    const map = new mapboxgl.Map({
+      container: "map",
+      style: "mapbox://styles/drakosi/ckvcwq3rwdw4314o3i2ho8tph",
+      center: [-99.29011, 39.39172],
+      zoom: 5,
+    });
+  });
   // only runs the first time the application is loaded
 
-
-
-
-    return (
-        <Wrapper id="map">
-
-        </Wrapper>
-    )
-}
+  return <Wrapper id="map"></Wrapper>;
+};
 
 const Wrapper = tw.div`
  flex-1 
 
-`
-export default Map
+`;
+export default Map;
