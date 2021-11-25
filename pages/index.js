@@ -33,6 +33,10 @@ export default function Home() {
             Reserve
           </ActionButton>
         </ActionButtons>
+
+        <InputButton>
+          Where to?
+        </InputButton>
       </ActionItems>
     </Wrapper>
   );
@@ -84,3 +88,7 @@ flex flex-col bg-gray-200 flex-1 m-1 rounded-lg items-center justify-center font
 const ActionButtonImage = tw.img`
 h-3/5
 `;
+
+const InputButton = tw.div`
+h-20 bg-gray-200 mt-8 flex items-center p-5 text-2xl font-normal rounded-sm
+`
