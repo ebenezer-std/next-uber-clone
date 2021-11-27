@@ -4,6 +4,8 @@ import Image from "next/image";
 import tw from "tailwind-styled-components";
 import mapboxgl from "!mapbox-gl";
 import Map from "./components/Map";
+import Link from "next/link";
+import Search from "./search";
 
 export default function Home() {
   return (
@@ -20,10 +22,12 @@ export default function Home() {
         </Header>
 
         <ActionButtons>
-          <ActionButton>
-            <ActionButtonImage src="https://i.ibb.co/cyvcpfF/uberx.png" />
-            Ride
-          </ActionButton>
+          <Link href="/search">
+            <ActionButton>
+              <ActionButtonImage src="https://i.ibb.co/cyvcpfF/uberx.png" />
+              Ride
+            </ActionButton>
+          </Link>
           <ActionButton>
             <ActionButtonImage src="https://i.ibb.co/n776JLm/bike.png" />
             Wheels
@@ -34,9 +38,7 @@ export default function Home() {
           </ActionButton>
         </ActionButtons>
 
-        <InputButton>
-          Where to?
-        </InputButton>
+        <InputButton>Where to?</InputButton>
       </ActionItems>
     </Wrapper>
   );
@@ -91,4 +93,4 @@ h-3/5
 
 const InputButton = tw.div`
 h-20 bg-gray-200 mt-8 flex items-center p-5 text-2xl font-normal rounded-sm
-`
+`;
