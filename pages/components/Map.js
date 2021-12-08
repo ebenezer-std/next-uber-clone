@@ -26,8 +26,8 @@ const Map = (props) => {
 
     pickupCoordinates && dropOffCoordinates
       ? map.fitBounds([pickupCoordinates, dropOffCoordinates], {
-        padding: 50
-      })
+          padding: 50,
+        })
       : console.log("Error centering");
   }, [pickupCoordinates, dropOffCoordinates]);
   // only runs the first time the application is loaded
